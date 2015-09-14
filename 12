@@ -1,0 +1,20 @@
+
+float xPos = 10;
+
+void setup() {  // setup() runs once
+  size(500, 500);
+  frameRate(10);
+    background(0);
+    stroke(255);
+}
+ 
+void draw() {
+  loop();// draw() loops forever, until stopped
+  xPos = xPos + 10;
+  if (xPos < 480) {
+  line(xPos, 480, xPos, mouseY);
+  }
+  if(xPos>480){
+    xPos=xPos-480;
+}
+}
